@@ -1,7 +1,7 @@
 {
     "name": "NucSeg3DThr-ImageJ",
     "container-image": {
-        "image": "neubiaswg5/w_nucseg3Dthr-imagej",
+        "image": "neubiaswg5/w_nucseg3dthr-imagej",
         "type": "singularity"
     },
     "schema-version": "cytomine-0.1",
