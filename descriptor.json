@@ -1,0 +1,92 @@
+{
+    "name": "NucSeg3DThr-ImageJ",
+    "container-image": {
+        "image": "neubiaswg5/w_nucseg3Dthr-imagej",
+        "type": "singularity"
+    },
+    "schema-version": "cytomine-0.1",
+    "description": "3D nuclei segmentation with simple global thresholding",
+    "command-line": "python wrapper.py CYTOMINE_HOST CYTOMINE_PUBLIC_KEY CYTOMINE_PRIVATE_KEY CYTOMINE_ID_PROJECT CYTOMINE_ID_SOFTWARE RAD THR EROD",
+    "inputs": [
+        {
+            "id": "cytomine_host",
+            "value-key": "@ID",
+            "command-line-flag": "--@id",
+            "name": "Cytomine host",
+            "description": "Cytomine server hostname",
+            "type": "String",
+            "optional": false,
+            "set-by-server": true
+        },
+        {
+            "id": "cytomine_public_key",
+            "value-key": "@ID",
+            "command-line-flag": "--@id",
+            "name": "Cytomine public key",
+            "description": "Cytomine public key",
+            "type": "String",
+            "optional": false,
+            "set-by-server": true
+        },
+        {
+            "id": "cytomine_private_key",
+            "value-key": "@ID",
+            "command-line-flag": "--@id",
+            "name": "Cytomine private key",
+            "description": "Cytomine private key",
+            "type": "String",
+            "optional": false,
+            "set-by-server": true
+        },
+        {
+            "id": "cytomine_id_project",
+            "value-key": "@ID",
+            "command-line-flag": "--@id",
+            "name": "Cytomine project id",
+            "description": "Cytomine project id",
+            "type": "String",
+            "optional": false,
+            "set-by-server": true
+        },
+        {
+            "id": "cytomine_id_software",
+            "value-key": "@ID",
+            "command-line-flag": "--@id",
+            "name": "Cytomine software id",
+            "description": "Cytomine software id",
+            "type": "String",
+            "optional": false,
+            "set-by-server": true
+        },
+        {
+            "id": "rad",
+            "value-key": "@ID",
+            "command-line-flag": "--@id",
+            "name": "Radius",
+            "description": "Radius for Gaussian smoothing",
+            "type": "Number",
+            "default-value": 4,
+            "optional": true
+        },
+        {
+            "id": "thr",
+            "value-key": "@ID",
+            "command-line-flag": "--@id",
+            "name": "Threshold",
+            "description": "Intensity Threshold ",
+            "type": "Number",
+            "default-value": 15,
+            "optional": true
+		},
+        {
+            "id": "erod",
+            "value-key": "@ID",
+            "command-line-flag": "--@id",
+            "name": "Erosion Radius",
+            "description": "Erosion Radius",
+            "type": "Number",
+            "default-value": 15,
+            "optional": true
+		}   
+    ]
+}
