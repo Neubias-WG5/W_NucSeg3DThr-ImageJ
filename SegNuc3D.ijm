@@ -35,6 +35,7 @@ for(i=0; i<images.length; i++) {
 		run("Fill Holes", "stack");
 		run("Watershed", "stack");
 		run("Minimum...", "radius="+d2s(erod,0)+" stack");
+		run("Connected Components Labeling", "connectivity=6 type=[16 bits]");
 		save(outputDir + "/" + image);
 		// Cleanup
 		run("Close All");
