@@ -41,4 +41,3 @@ for(i=0; i<images.length; i++) {
 		run("Close All");
 	}
 }
-run("Quit");
